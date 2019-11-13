@@ -1,22 +1,57 @@
 .App {
   text-align: center;
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
+.Auth{
+  height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.AuthSign{
+   position: absolute;
+   top: 50%;
+   transform: translate(0, -50%)
+}
+
+.input-field .prefix.active {
+  color: #FF8A65;
+}
+
+.input-field label{
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #ff8a65 !important;
+  box-shadow: 0 1px 0 0 #ff8a65 !important;
+}
+
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid #ff8a65 !important;
+  box-shadow: 0 1px 0 0 #ff8a65 !important;
+}
+
+.input-field input[type=email]:focus + label {
+  color: #ff8a65 !important;
+}
+
+.input-field input[type=password]:focus + label {
+  color: #ff8a65 !important;
+}
+
+.card{
+  border-radius: 15px;
+}
+
+.btn-small{
+  border-radius: 15px;
+}
+
+.input-field input:-webkit-autofill:hover,
+.input-field input:-webkit-autofill:focus,
+.input-field input:-webkit-autofill{
+  -webkit-box-shadow: 0 0 0px 1000px #263238 inset;
+  -webkit-text-fill-color: white;
+  background-color: transparent;
+  color: white;
 }
