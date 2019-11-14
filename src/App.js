@@ -4,9 +4,12 @@ import firebase from 'firebase'
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 
 import AuthScripts from './scripts/AuthScripts';
-import HomeScripts from './scripts/HomeScripts'
 import { AuthProvider } from './scripts/AuthContext';
 import PrivateRoute from './scripts/PrivateRoute';
+import NavBar from './components/NavBar';
+
+import M from 'materialize-css'
+
 
 const firebaseConfig = {
   apiKey: "AIzaSyAMcoNyeePBNsS57JUwTgVcHE8mDvhpz7Y",
@@ -19,11 +22,16 @@ const firebaseConfig = {
   measurementId: "G-7Q465XYYP3"
 };
 
-export default class Appp extends React.Component{
+export default class App extends React.Component{
 
   componentDidMount(){
     firebase.initializeApp(firebaseConfig)
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems);
+    });
   }
+  
 
   render(){
     return(
@@ -32,14 +40,11 @@ export default class Appp extends React.Component{
         <Router>
           <div>
             <Route exact path="/" component={AuthScripts}/>
-            <PrivateRoute exact path="/home" component={HomeScripts}/>
+            <PrivateRoute exact path="/home" component={NavBar}/>
           </div>
         </Router>
         </AuthProvider>
-
-
-    </div>
-
+      </div>
     )
   }
 }

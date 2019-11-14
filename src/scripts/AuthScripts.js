@@ -27,8 +27,9 @@ const Login = ({ history }) => {
   }
 
   return (
+    <div style={{height: "100vh"}} className="valign-wrapper">
     <div className="AuthSign row container">
-    <div className="col s6 push-s7">
+    <div className="col s6 push-s3">
       <div className="card blue-grey darken-4">
       <div className="card-content container white-text">
 
@@ -36,7 +37,7 @@ const Login = ({ history }) => {
 
       <div className="row">
         <form onSubmit={handleLogin} autoComplete="off" spellCheck="false" className="col s12">
-
+          
           <div className="row">
             <div className="input-field col s12">
               <i id="email-icon" className="material-icons prefix">account_circle</i>
@@ -61,14 +62,14 @@ const Login = ({ history }) => {
               id="icon_pass" 
               type="password"
               name="password"
-              className="white-text"/>
+              className="white-text container"/>
 
               <label id="password" for="icon_pass">Contraseña</label>
             </div>
           </div>
 
 
-          <div className="container col s12">
+          <div className="col s12">
           <button className="waves-effect waves-light btn-small deep-orange lighten-2 col s12" type="submit" name="login">Iniciar sesión</button>          
           </div>
 
@@ -80,6 +81,7 @@ const Login = ({ history }) => {
       </div>
       </div>
     </div>
+  </div>
   </div>
   );
 };

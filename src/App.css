@@ -3,15 +3,15 @@
   height: 100vh;
 }
 
-.Auth{
+/* .Auth{
   height: 100vh;
-}
+} */
 
-.AuthSign{
+/* .AuthSign{
    position: absolute;
    top: 50%;
    transform: translate(0, -50%)
-}
+} */
 
 .input-field .prefix.active {
   color: #FF8A65;
