@@ -1,17 +1,6 @@
 .App {
-  text-align: center;
   height: 100vh;
 }
-
-/* .Auth{
-  height: 100vh;
-} */
-
-/* .AuthSign{
-   position: absolute;
-   top: 50%;
-   transform: translate(0, -50%)
-} */
 
 .input-field .prefix.active {
   color: #FF8A65;
@@ -54,4 +43,8 @@
   -webkit-text-fill-color: white;
   background-color: transparent;
   color: white;
+}
+
+ul div li:hover {
+  background-color: #ff8a65;
 }

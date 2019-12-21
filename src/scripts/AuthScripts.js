@@ -33,7 +33,7 @@ const Login = ({ history }) => {
       <div className="card blue-grey darken-4">
       <div className="card-content container white-text">
 
-        <h5 style={{margin:20, fontWeight:'bold'}}>Admin Login</h5>
+        <h5 style={{margin:20, fontWeight:'bold', textAlign:'center'}}>Admin Login</h5>
 
       <div className="row">
         <form onSubmit={handleLogin} autoComplete="off" spellCheck="false" className="col s12">

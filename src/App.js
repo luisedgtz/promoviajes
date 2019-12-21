@@ -8,9 +8,6 @@ import { AuthProvider } from './scripts/AuthContext';
 import PrivateRoute from './scripts/PrivateRoute';
 import NavBar from './components/NavBar';
 
-import M from 'materialize-css'
-
-
 const firebaseConfig = {
   apiKey: "AIzaSyAMcoNyeePBNsS57JUwTgVcHE8mDvhpz7Y",
   authDomain: "promoviajes-1.firebaseapp.com",
@@ -26,10 +23,6 @@ export default class App extends React.Component{
 
   componentDidMount(){
     firebase.initializeApp(firebaseConfig)
-    document.addEventListener('DOMContentLoaded', function() {
-      var elems = document.querySelectorAll('.sidenav');
-      var instances = M.Sidenav.init(elems);
-    });
   }
   
 
