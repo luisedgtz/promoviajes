@@ -48,3 +48,24 @@
 ul div li:hover {
   background-color: #ff8a65;
 }
+
+.tabs .tab a{
+  color:#263238;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+  background-color:#ECEFF1;
+} /*Text color on hover*/
+
+.tabs .tab a:focus.active {
+  background-color:#ECEFF1;
+  color: #ff8a65;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color:#ff8a65;
+} /*Color of underline*/
+
+#btndelete :hover{
+  background-color:red!important;
+}

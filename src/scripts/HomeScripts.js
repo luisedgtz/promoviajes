@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from 'firebase'
 import NavBar from '../components/NavBar';
+import Home from '../components/Home'
 
 
 class HomeScripts extends React.Component{
@@ -15,7 +16,10 @@ class HomeScripts extends React.Component{
   
   render(){
     return(
+      <div>
         <NavBar></NavBar>
+        <Home></Home>
+      </div>
     )
   }
 }

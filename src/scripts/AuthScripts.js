@@ -23,12 +23,12 @@ const Login = ({ history }) => {
   const { currentUser } = useContext(AuthContext);
 
   if (currentUser) {
-    return <Redirect to="/home"/>;
+    return <Redirect to="/"/>;
   }
 
   return (
     <div style={{height: "100vh"}} className="valign-wrapper">
-    <div className="AuthSign row container">
+    <div className="row container">
     <div className="col s6 push-s3">
       <div className="card blue-grey darken-4">
       <div className="card-content container white-text">

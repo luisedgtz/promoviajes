@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
 import firebase from 'firebase'
-import {BrowserRouter as Router, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 import AuthScripts from './scripts/AuthScripts';
 import { AuthProvider } from './scripts/AuthContext';
 import PrivateRoute from './scripts/PrivateRoute';
-import NavBar from './components/NavBar';
+import HomeScripts from './scripts/HomeScripts';
+import ReservasScripts from './scripts/ReservasScripts';
+import UsuariosScripts from './scripts/UsuariosScripts';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAMcoNyeePBNsS57JUwTgVcHE8mDvhpz7Y",
@@ -23,6 +25,8 @@ export default class App extends React.Component{
 
   componentDidMount(){
     firebase.initializeApp(firebaseConfig)
+    const M=window.M;
+    M.AutoInit();
   }
   
 
@@ -31,10 +35,17 @@ export default class App extends React.Component{
       <div className="App">
         <AuthProvider>
         <Router>
+          <Switch>
           <div>
-            <Route exact path="/" component={AuthScripts}/>
-            <PrivateRoute exact path="/home" component={NavBar}/>
+            <Route exact path="/login" component={AuthScripts}/>
+            <PrivateRoute exact path="/" component={HomeScripts}/>
+            <Route exact path="/reservations" component={ReservasScripts}/>
+            <Route exact path="/reports" component={ReservasScripts}/>
+            <Route exact path="/catalogs" component={ReservasScripts}/>
+            <Route exact path="/usdchange" component={ReservasScripts}/>
+            <Route exact path="/users" component={UsuariosScripts}/>
           </div>
+          </Switch>
         </Router>
         </AuthProvider>
       </div>
